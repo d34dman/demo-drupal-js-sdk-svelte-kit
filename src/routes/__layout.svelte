@@ -1,5 +1,7 @@
 <script>
 	import Header from '$lib/Header/index.svelte';
+	
+  	import '../tailwind.css'
 	import '../app.css';
 </script>
 
