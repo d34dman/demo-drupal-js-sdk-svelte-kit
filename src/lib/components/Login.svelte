@@ -52,10 +52,26 @@
               autocomplete={rememberMe ? 'current-password' : 'off'}
               required
               id="password" type="text" placeholder="password" class="input input-bordered"> 
-            <span class="label">
-              <a href="/user/password" class="label-text-alt">Forgot password?</a>
-            </span>
           </div> 
+          <div class="flex items-center justify-between mt-2  ">
+            <div class="text-sm">
+              <a href="/user/password" class="label-text-alt">
+                Forgot your password?
+              </a>
+            </div>
+            <label class="cursor-pointer label" for="remember_me">
+              <span class="label-text-alt mr-2">Remember me</span> 
+              <div>
+                <input 
+                bind:checked={rememberMe}
+                id="remember_me"
+                name="remember_me"
+                type="checkbox" 
+                class="checkbox checkbox-accent"> 
+                <span class="checkbox-mark"></span>
+              </div>
+            </label>
+          </div>
           <div class="form-control mt-6">
             <button 
             disabled={inProgress}
