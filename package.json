@@ -15,6 +15,7 @@
     "drupal-js-sdk": "^0.0.10",
     "postcss": "^8.3.0",
     "svelte": "^3.34.0",
+    "svelte-preprocess": "^4.7.3",
     "tailwindcss": "^2.1.4"
   },
   "type": "module",
