@@ -1,20 +1,21 @@
-# create-svelte
+# Drupal Javascript SDK Demo - SvelteKit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Sveltekit based example for consuming Drupal Javascript SDK.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Installing
 
 ```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
+npm install
 ```
 
-> Note: the `@next` is temporary
+## Configuration
+Copy `example.env` to `.env` file in project root and modify the settings as per your prorject.
+
+Config | Explanation
+--- | ---
+`VITE_DRUPAL_BASE_URL `| Drupal base url to connect to
+
+Alternatively, you can also set them via environment variables with sanem config name.
 
 ## Developing
 
@@ -26,13 +27,4 @@ npm run dev
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
 ```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
+The project should be available at http://localhost:3000.
