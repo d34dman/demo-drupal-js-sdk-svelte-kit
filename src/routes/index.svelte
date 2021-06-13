@@ -1,27 +1,28 @@
-<script context="module">
-	export const prerender = true;
-</script>
 
 <script>
 	import Login from '$lib/components/Login.svelte';
 	import { auth } from '$lib/drupal';
 	import { onMount } from 'svelte';
+	import Alert from '$lib/components/Alert.svelte';
+	import Page from '$lib/components/Page.svelte';
 	let user = getDefaultUserInfo();
 	let inProgress = false;
 	let error = null;
+	let initialized = false;
 	onMount(async () => {
 		await auth.getSessionToken().catch((err) => {
 			error = err.message;
 			return false;
 		});
 		user.loggedIn = await auth.loginStatus().catch((err) => {error = err.message; return false;});
+		initialized = true;
 	});
 	function getDefaultUserInfo() {
 		return { username: '', password: '', loggedIn: false };
 	}
 	function logout() {
 		auth
-			.logout()
+			.forcedLogout()
 			.then(async () => {
 				user = getDefaultUserInfo();
 			})
@@ -56,10 +57,14 @@
 </svelte:head>
 
 <section>
-	
-{#if user.loggedIn}
-	logged in...
-{:else}
-	<Login on:login={login} {error} {inProgress} />
+{#if error}
+<Alert type="error" message={error} />
+{/if}
+{#if initialized === true} 
+	{#if user.loggedIn}
+		<Page on:logout={logout} {error} />
+	{:else}
+		<Login on:login={login} {error} {inProgress} />
+	{/if}
 {/if}
 </section>
