@@ -14,11 +14,38 @@
 <div class="hero min-h-screen bg-base-200">
   <div class="flex-col justify-center hero-content lg:flex-row">
     <div class="text-center lg:text-left">
+
+
       <h1 class="mb-5 text-5xl font-bold">
-            Hello there
+            Hello Dave
           </h1> 
+    <div class="mockup-code mr-4 mb-4 p-4">
+      <pre data-prefix="$">
+        <code>Hello, HAL. Do you read me, HAL?</code>
+      </pre> 
+      <pre data-prefix="( o )">
+        <code>Affirmative, Dave. I read you.</code>
+      </pre> 
+      <pre data-prefix="$">
+        <code>Open the pod bay doors, HAL.</code>
+      </pre> 
+      <pre data-prefix="( o )" class="bg-warning text-neutral">
+        <code>I am afraid I can't do that Dave!</code>
+      </pre>
+    </div>
+
       <p class="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+            
+
+            Oddly enough "admin" never made it into the top ten worst passwords. 
+            The closest it ranked was 11th in the list published by internt security firm - SplashData.
+            
+          </p>
+          <p class="mb-5">
+            Username : admin
+          </p>
+          <p class="mb-5">
+            Password : admin
           </p>
     </div> 
     <form

@@ -8,6 +8,7 @@
 	let user = getDefaultUserInfo();
 	let inProgress = false;
 	let error = null;
+	let loginError = null;
 	let initialized = false;
 	onMount(async () => {
 		await auth.getSessionToken().catch((err) => {
@@ -20,6 +21,10 @@
 	function getDefaultUserInfo() {
 		return { username: '', password: '', loggedIn: false };
 	}
+	function resetInprogressStatus() {
+		inProgress = false;
+	}
+
 	function logout() {
 		auth
 			.forcedLogout()
@@ -37,17 +42,21 @@
 			.login(input.username, input.password)
 			.then(
 				(response) => {
-					inProgress = false;
+					resetInprogressStatus();
+					loginError = '';
+					error = '';
 					user.username = response.data.current_user.name;
 					user.loggedIn = true;
 					user.password = '';
 				},
 				(err) => {
-					error = err.response.data.message;
+					loginError = err.response.data.message;
+					resetInprogressStatus();
 				}
 			)
 			.catch((err) => {
-				error = err.response.data.message;
+				loginError = err.response.data.message;
+				resetInprogressStatus();
 			});
 	}
 </script>
@@ -64,7 +73,7 @@
 	{#if user.loggedIn}
 		<Page on:logout={logout} {error} />
 	{:else}
-		<Login on:login={login} {error} {inProgress} />
+		<Login on:login={login} error={loginError} {inProgress} />
 	{/if}
 {/if}
 </section>
