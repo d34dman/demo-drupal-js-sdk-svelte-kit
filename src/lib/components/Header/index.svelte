@@ -49,7 +49,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!----> <!---->
         </svg>
       </div> 
-      <ul class="shadow menu dropdown-content bg-base-100 rounded-box w-52">
+      <ul class="shadow menu dropdown-content bg-neutral rounded-box w-52">
 {#each menu as menu_item}
     <li><a href="{menu_item.href}">{menu_item.label}</a></li>
 {/each}

@@ -78,7 +78,7 @@
               bind:value={user.password}
               autocomplete={rememberMe ? 'current-password' : 'off'}
               required
-              id="password" type="text" placeholder="password" class="input input-bordered"> 
+              id="password" type="password" placeholder="password" class="input input-bordered"> 
           </div> 
           <div class="flex items-center justify-between mt-2  ">
             <div class="text-sm">
