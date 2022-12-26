@@ -21,8 +21,7 @@
 <script>
 	import Header from '$lib/components/Header/index.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-  	import '../tailwind.css'
-	import '../app.css';
+  	import '../app.css';
 	export let menu = [];
 </script>
 <Header  {menu} />
