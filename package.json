@@ -10,6 +10,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/adapter-netlify": "^1.0.0",
+		"@sveltejs/adapter-node": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
 		"autoprefixer": "^10.4.13",
 		"daisyui": "^2.46.0",

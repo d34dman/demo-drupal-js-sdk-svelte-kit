@@ -1,3 +1,8 @@
+<script>
+  import { page } from '$app/stores';
+  $: console.log(page.error);
+</script>
+<h1>{$page.error.message}</h1>
 <div class="grid grid-cols-4 gap-4">
   <div class="col-start-2 col-span-2 m-10 alert alert-error shadow-lg">
     <div>
