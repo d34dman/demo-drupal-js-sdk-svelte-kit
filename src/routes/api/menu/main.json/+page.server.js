@@ -1,4 +1,4 @@
-import { drupalMenu } from '$lib/drupal';
+import { drupalMenu } from '$lib/server/drupal';
 
 export async function get() {
 	let main_items = [];

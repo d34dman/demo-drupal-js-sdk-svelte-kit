@@ -11,9 +11,6 @@ export const handle = async ({ event, resolve }) => {
 
 /** @type {import('@sveltejs/kit').HandleServerError} */
 export function handleError({ error, event }) {
-	console.log('Error detected');
-	console.log(error);
-	console.log(event);
 	return {
 	  message: 'Whoops!',
 	  code: error?.code ?? 'UNKNOWN'
