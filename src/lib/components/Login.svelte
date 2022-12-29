@@ -1,13 +1,8 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
-  import Alert from '$lib/components/Alert.svelte';
-	const dispatch = createEventDispatcher();
+	import Alert from '$lib/components/Alert.svelte';
 	let user = { username: '', password: '' };
 	export let error = '';
 	export let inProgress = false;
-	function login() {
-		dispatch('login', user);
-	}
 	let rememberMe = false;
 </script>
 
@@ -49,10 +44,9 @@
           </p>
     </div> 
     <form
-			on:submit|preventDefault={login}
 			autocomplete={rememberMe ? 'on' : 'off'}
-			action="#"
 			method="POST"
+      action="?/login"
       class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100"
 		>
       {#if error}
@@ -68,6 +62,7 @@
               bind:value={user.username}
               autocomplete={rememberMe ? 'name' : 'off'}
               required
+              name="username"
               id="username" type="text" placeholder="username" class="input input-bordered">
           </div> 
           <div class="form-control">
@@ -78,6 +73,7 @@
               bind:value={user.password}
               autocomplete={rememberMe ? 'current-password' : 'off'}
               required
+              name="password"
               id="password" type="password" placeholder="password" class="input input-bordered"> 
           </div> 
           <div class="flex items-center justify-between mt-2  ">
@@ -104,6 +100,7 @@
             disabled={inProgress}
 					  type="submit"
             class="btn btn-primary">Sign in</button>
+            <button>Log in</button>
           </div>
         </div>
       </div>

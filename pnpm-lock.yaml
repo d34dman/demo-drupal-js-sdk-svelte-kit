@@ -2,8 +2,14 @@ lockfileVersion: 5.4
 
 specifiers:
   '@drupal-js-sdk/auth': ^0.3.14
+  '@drupal-js-sdk/core': ^0.3.14
+  '@drupal-js-sdk/error': ^0.3.13
+  '@drupal-js-sdk/interfaces': ^0.3.13
   '@drupal-js-sdk/menu': ^0.3.14
+  '@drupal-js-sdk/role': ^0.3.14
+  '@drupal-js-sdk/settings': ^0.3.14
   '@drupal-js-sdk/storage': ^0.3.13
+  '@drupal-js-sdk/xhr': ^0.3.13
   '@fontsource/fira-mono': ^4.5.10
   '@lukeed/uuid': ^2.0.0
   '@sveltejs/adapter-auto': ^1.0.0
@@ -11,22 +17,32 @@ specifiers:
   '@sveltejs/adapter-node': ^1.0.0
   '@sveltejs/kit': ^1.0.1
   autoprefixer: ^10.4.13
+  axios: ^1.2.2
   daisyui: ^2.46.0
   drupal-js-sdk: ^0.3.13
   postcss: ^8.4.20
   svelte: ^3.55.0
   svelte-check: ^2.10.3
+  svelte-kit-cookie-session: ^3.3.2
   tailwindcss: ^3.2.4
   typescript: ^4.9.4
   vite: ^4.0.3
 
 dependencies:
   '@drupal-js-sdk/auth': 0.3.14
+  '@drupal-js-sdk/core': 0.3.14
+  '@drupal-js-sdk/error': 0.3.13
+  '@drupal-js-sdk/interfaces': 0.3.13
   '@drupal-js-sdk/menu': 0.3.14
+  '@drupal-js-sdk/role': 0.3.14
+  '@drupal-js-sdk/settings': 0.3.14
   '@drupal-js-sdk/storage': 0.3.13
+  '@drupal-js-sdk/xhr': 0.3.13
   '@fontsource/fira-mono': 4.5.10
   '@lukeed/uuid': 2.0.0
+  axios: 1.2.2
   drupal-js-sdk: 0.3.13
+  svelte-kit-cookie-session: 3.3.2
 
 devDependencies:
   '@sveltejs/adapter-auto': 1.0.0_@sveltejs+kit@1.0.1
@@ -53,12 +69,37 @@ packages:
     requiresBuild: true
     dev: false
 
+  /@drupal-js-sdk/error/0.3.13:
+    resolution: {integrity: sha512-5E6vR4CVgFxcahxuUrg+9n5870s7XxMLlX0P4qX7OMDqearAoxukcHnj7rmljdBNzqUu+O89WHwjkQ72aNYtaw==}
+    requiresBuild: true
+    dev: false
+
+  /@drupal-js-sdk/interfaces/0.3.13:
+    resolution: {integrity: sha512-9oBIH+O9U3bk5dVjlxmKOBszHAKJwjk4orFcuCnMImmhVRuQ31YoF6LvpOwm0SOJLWixDgE12+xiejN5SZgpwQ==}
+    requiresBuild: true
+    dev: false
+
   /@drupal-js-sdk/menu/0.3.14:
     resolution: {integrity: sha512-1ZdvVlwIQVevVS4JEEcNJZXCyorQ6CcItamuWHAQe2k50DKWm9Clzgppx7w8eS9p/2B1lJViJZlxQVj6jc9WDg==}
     dev: false
 
+  /@drupal-js-sdk/role/0.3.14:
+    resolution: {integrity: sha512-6Oft7ICDzcD+c/CqJNOFFofeHkMd2ZcZqhKGSD5cELOLptyxAg1QLr1JHD0Pvx06qRzTvkSsmQ+Zp7YbzBzsUw==}
+    requiresBuild: true
+    dev: false
+
+  /@drupal-js-sdk/settings/0.3.14:
+    resolution: {integrity: sha512-XmCBZDMcvTuvd7jgpCqfkj2tiP7/9M3L0KF+LwiMZQJyC3mNOPwZQ0MeJUYfxodeRhRHaYjQ5Q/5HB+3ARpGtA==}
+    requiresBuild: true
+    dev: false
+
   /@drupal-js-sdk/storage/0.3.13:
     resolution: {integrity: sha512-pfCCKhJsGDn1H6n+w0AeK+c8M3QYu9opSsKymb21cO5jTNkaVRfBaYhVmdRqfw1TJNYcH6RUSgGYtkzEeqtrxg==}
+    dev: false
+
+  /@drupal-js-sdk/xhr/0.3.13:
+    resolution: {integrity: sha512-OAaFvG8K6NXIhiFoP1m7yeXYeF30uI+M/scN2zrEP3KMYBNhfJ/lzGTZ4cs189Vu0CmUFmmUcqQ177RnSuIm0A==}
+    requiresBuild: true
     dev: false
 
   /@esbuild/android-arm/0.16.12:
@@ -765,6 +806,7 @@ packages:
 
   /drupal-js-sdk/0.3.13:
     resolution: {integrity: sha512-jy1NnOR9qomf7CEBguhjy1mCRWGKdd3K0wB39JchR+GYQlb/G0IvZUITQLmkVWi4FSZyVvxKYAIEuQEb0zYWvA==}
+    requiresBuild: true
     dependencies:
       '@drupal-js-sdk/core': 0.3.14
       axios: 1.2.2
@@ -817,7 +859,6 @@ packages:
 
   /esm-env/1.0.0:
     resolution: {integrity: sha512-Cf6VksWPsTuW01vU9Mk/3vRue91Zevka5SjyNf3nEpokFRuqt/KjUQoGAwq9qMmhpLTHmXzSIrFRw8zxWzmFBA==}
-    dev: true
 
   /estree-walker/2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
@@ -1422,6 +1463,13 @@ packages:
       svelte: 3.55.0
     dev: true
 
+  /svelte-kit-cookie-session/3.3.2:
+    resolution: {integrity: sha512-gezrXK2kIA4mwANYjvsCkUd+z0aP0wWlz7/VFCkX8op99kTJjoqTSEdgLfgdGpbS48A77BQH4oJBEtX2QJbpSA==}
+    dependencies:
+      esm-env: 1.0.0
+      zencrypt: 0.0.7
+    dev: false
+
   /svelte-preprocess/4.10.7_uldce6htlskfyklq5y55tk7pdy:
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}
     engines: {node: '>= 9.11.2'}
@@ -1617,3 +1665,7 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
     dev: true
+
+  /zencrypt/0.0.7:
+    resolution: {integrity: sha512-UGqj7MySefAgoD8E17cJEsTNhYmjeYnT2Pp++2eC4Vgmc4S1fliFxSn6uAcLqkuPJ7YhD0Un/CW2ZYxrOlpJxw==}
+    dev: false
