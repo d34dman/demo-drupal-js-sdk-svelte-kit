@@ -1,10 +1,5 @@
 <script>
-	import { createEventDispatcher } from 'svelte';
-	const dispatch = createEventDispatcher();
 	export const error = null;
-	function logout() {
-		dispatch('logout', {});
-	}
 </script>
 
 <svelte:head>
@@ -26,13 +21,13 @@
 		<img src="https://picsum.photos/id/119/300/200" class="rounded-lg shadow-lg" alt="a random background">
 		</figure> 
 		<div class="max-w-md card-body">
-		<h2 class="card-title">Glass</h2> 
-		<p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p> 
+		<h2 class="card-title">Demo Logout</h2> 
+		<p>The following logout button clears some session cookies on the server and thats it.</p> 
+		<p>Am still working on getting DrupalAuth.logout work for serverside (maybe never will, lets see).</p>
 		<div class="card-actions">
-			<button 
-
-			on:click|once={logout}
-			class="btn glass rounded-full">Logout</button>
+			<form method="POST" action="?/logout">
+				<button class="btn glass rounded-full">Logout</button>
+			</form>
 		</div>
 		</div>
 	</div>

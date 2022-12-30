@@ -9,24 +9,14 @@
 <div class="hero min-h-screen bg-base-200">
   <div class="flex-col justify-center hero-content lg:flex-row">
     <div class="text-center lg:text-left">
-
-
       <h1 class="mb-5 text-5xl font-bold">
             Hello Dave
           </h1> 
     <div class="mockup-code mr-4 mb-4 p-4">
-      <pre data-prefix="$">
-        <code>Hello, HAL. Do you read me, HAL?</code>
-      </pre> 
-      <pre data-prefix="( o )">
-        <code>Affirmative, Dave. I read you.</code>
-      </pre> 
-      <pre data-prefix="$">
-        <code>Open the pod bay doors, HAL.</code>
-      </pre> 
-      <pre data-prefix="( o )" class="bg-warning text-neutral">
-        <code>I am afraid I can't do that Dave!</code>
-      </pre>
+      <pre data-prefix="🧑"><code>Hello, HAL. Do you read me, HAL?</code></pre> 
+      <pre data-prefix="⭕"><code>Affirmative, Dave. I read you.</code></pre> 
+      <pre data-prefix="🧑"><code>Open the pod bay doors, HAL.</code></pre> 
+      <pre data-prefix="⭕" class="bg-warning text-neutral"><code>I am afraid I can't do that Dave!</code></pre>
     </div>
 
       <p class="mb-5">
@@ -100,7 +90,6 @@
             disabled={inProgress}
 					  type="submit"
             class="btn btn-primary">Sign in</button>
-            <button>Log in</button>
           </div>
         </div>
       </div>

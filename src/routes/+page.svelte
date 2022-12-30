@@ -16,7 +16,6 @@
 </svelte:head>
 
 <section>
-<pre>{debug_data}</pre>
 {#if error}
 <Alert type="error" message={error} />
 {/if}

@@ -43,5 +43,8 @@ export const actions = {
     },
     register: async (event) => {
       // TODO register the user
+    },
+    logout: async ({locals}) => {
+      locals.session.destroy();
     }
   };
